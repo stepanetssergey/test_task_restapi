@@ -7,9 +7,13 @@ for install:
    - python manage.py runserver 0.0.0.0:8080
 
       list of api: 127.0.0.1:8080/api
+
           user(s): 127.0.0.1:8080/api/user
+
     documentation: 127.0.0.1:8080/docs
+
 addition fields for etherscan.io access (address and api key): 127.0.0.1:8080/api/user/[user id]/etherapi
+
 get information from etherscan.io GET method: 127.0.0.1:8080/api/user/[id]/etherinfo
 
    
