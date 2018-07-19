@@ -7,6 +7,9 @@ from . import views
 router = DefaultRouter()
 router.register('user', views.UserAPIView)
 router.register('login', views.LoginViewSet, base_name='login')
+router.register('user/(?P<id>[^/.]+)/etherapi',views.UpdateEtherSet, base_name='postEtherData')
+router.register('user/(?P<id>[^/.]+)/etherinfo',views.GetInfoFromEtherscan, base_name='getInfoEther')
+
 
 urlpatterns = [
     url('^',include(router.urls))

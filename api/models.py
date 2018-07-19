@@ -31,6 +31,7 @@ class UserAPI(AbstractBaseUser,PermissionsMixin):
     name = models.CharField(max_length = 255, unique=True)
     lastname = models.CharField(max_length = 255)
     ether_address = models.CharField(max_length = 255)
+    api_key = models.CharField(max_length=255, blank=True)
     is_staff = models.BooleanField(default=True)
     is_active = models.BooleanField(default=True)
 

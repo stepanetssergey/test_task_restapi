@@ -20,3 +20,16 @@ class UserAPISerializer(ModelSerializer):
         user.set_password(data['password'])
         user.save()
         return user
+
+class UserAPISerializerUpdate(ModelSerializer):
+    """Update fields for user for connect to etherscan.io"""
+
+    class Meta:
+        model = models.UserAPI
+        fields = ("id","ether_address","api_key")
+    
+    
+
+
+
+
